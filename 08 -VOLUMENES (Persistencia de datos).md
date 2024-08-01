@@ -14,7 +14,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong#Password" -p 1433
 
 # CREAR CONTENEDOR CON VOLUME ORACLE, antes hay que crear volumen db_oracle
 ```bash
-docker run -e ORACLE_PASSWORD=yourStrongPassword -p 1521:1521 --name oracle --mount src=db_oracle,dst=/opt/oracle/oradata -d gvenzl/oracle-xe
+ docker run -e "ORACLE_PASSWORD=yourStrongPassword" -p 1521:1521 --name oracle --mount src=db_oracle,dst=/opt/oracle/oradata -d gvenzl/oracle-xe
 ```
 
 
