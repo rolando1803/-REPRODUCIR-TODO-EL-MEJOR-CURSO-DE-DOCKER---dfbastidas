@@ -19,7 +19,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong#Password" -p 1433
 
 # CREAR CONTENEDOR CON VOLUME MYSQL
 ```bash
- docker run -e MYSQL_ROOT_PASSWORD=yourStrongPassword -p 3306:3306 --name mysql --mount src=db_mysql,dst=/var/lib/mysql -d mysql:latest
+ docker run -e "MYSQL_ROOT_PASSWORD=yourStrongPassword" -p 3306:3306 --name mysql --mount src=db_mysql,dst=/var/lib/mysql -d mysql:latest
 ```
 
 
