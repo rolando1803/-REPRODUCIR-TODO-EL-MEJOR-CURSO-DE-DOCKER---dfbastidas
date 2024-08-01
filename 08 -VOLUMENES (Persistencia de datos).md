@@ -7,14 +7,19 @@
 ![image](https://github.com/user-attachments/assets/bee548fd-422b-460a-82cb-c110f9bfb146)
 ![image](https://github.com/user-attachments/assets/82776589-2989-4500-bdc2-4e3ff8396ad0)
 
-# CREAR CONTENEDOR CON VOLUME SQL SERVER, antes hay que crear volumen db_sqlServer
+# CREAR CONTENEDOR CON VOLUME SQL SERVER
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong#Password" -p 1433:1433 --name sqlserver --mount src=db_sqlServer,dst=/var/opt/mssql -d mcr.microsoft.com/mssql/server:2022-latest
 ```
 
-# CREAR CONTENEDOR CON VOLUME ORACLE, antes hay que crear volumen db_oracle
+# CREAR CONTENEDOR CON VOLUME ORACLE
 ```bash
  docker run -e "ORACLE_PASSWORD=yourStrongPassword" -p 1521:1521 --name oracle --mount src=db_oracle,dst=/opt/oracle/oradata -d gvenzl/oracle-xe
+```
+
+# CREAR CONTENEDOR CON VOLUME MYSQL
+```bash
+ docker run -e MYSQL_ROOT_PASSWORD=yourStrongPassword -p 3306:3306 --name mysql --mount src=db_mysql,dst=/var/lib/mysql -d mysql:latest
 ```
 
 
