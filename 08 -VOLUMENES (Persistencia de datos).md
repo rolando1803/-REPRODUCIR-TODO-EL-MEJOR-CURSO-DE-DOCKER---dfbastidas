@@ -6,6 +6,12 @@
 ![image](https://github.com/user-attachments/assets/f747d882-1b86-4355-a536-054b0ca4a416)
 ![image](https://github.com/user-attachments/assets/bee548fd-422b-460a-82cb-c110f9bfb146)
 ![image](https://github.com/user-attachments/assets/82776589-2989-4500-bdc2-4e3ff8396ad0)
+
+# CREAR CONTENEDOR CON VOLUME OPCIONAL
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong#Password" -p 1433:1433 --name sqlserver --mount src=db_sqlServer,dst=/var/opt/mssql -d mcr.microsoft.com/mssql/server:2022-latest
+```
+
 ![image](https://github.com/user-attachments/assets/60e10aa2-9aaf-4754-a293-9c8cece4031b)
 ![image](https://github.com/user-attachments/assets/0067c29c-3c4e-487d-8847-4df31fe006f2)
 ![image](https://github.com/user-attachments/assets/24847476-b54e-475e-b35d-357963436104)
